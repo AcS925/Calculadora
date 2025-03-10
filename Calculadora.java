@@ -27,6 +27,15 @@ public class Calculadora {
         System.out.println("Realizando división: " + a + " / " + b);
         return a / b;
     }
+
+    public static double potencia(double base, double exponente) {
+        return Math.pow(base, exponente);
+    }
+    
+    public static double media(double a, double b){
+
+        return (a + b)/ 2;
+    }
     
     public static int calculadora(int a, int b, char operacion) {
         switch (operacion) {
