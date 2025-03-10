@@ -2,9 +2,24 @@ import java.util.Scanner;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+
+/**
+ * Esta clase nos permite realizar operaciones matemáticas como la suma, resta, multiplicación o división.
+ * @author Abel Cano Serrano
+ * @version 1.0
+ */
+public class Calculadora {
+}
+
 public class Calculadora {
     
-    public static int sumar(int a, int b) {
+    /**
+ * Suma dos números.
+ * @param a El primer número
+ * @param b El segundo número
+ * @return La suma de los dos números
+ */
+    public static int sumando(int a, int b) {
         System.out.println("Realizando suma: " + a + " + " + b);
         return a + b;
     }
@@ -19,6 +34,15 @@ public class Calculadora {
         return a * b;
     }
     
+    /**
+ * Realiza la división de dos números.
+ * Si el divisor es cero, lanza una excepción.
+ * @param a El numerador
+ * @param b El divisor
+ * @return El resultado de la división
+ * @throws ArithmeticException Si el divisor es cero
+ */
+   
     public static int dividir(int a, int b) {
         if (b == 0) {
             System.out.println("Error: División por cero, lanzando excepción");
@@ -27,14 +51,11 @@ public class Calculadora {
         System.out.println("Realizando división: " + a + " / " + b);
         return a / b;
     }
-
-    public static double potencia(double base, double exponente) {
-    return Math.pow(base, exponente);
-    }
-
+    
     public static int calculadora(int a, int b, char operacion) {
         switch (operacion) {
-            case '+': return sumar(a, b);
+            case '+': System.out.println("Realizando suma: " + a + " + " + b);
+                return a + b;
             case '-': return restar(a, b);
             case '*': return multiplicar(a, b);
             case '/': return dividir(a, b);
@@ -45,7 +66,7 @@ public class Calculadora {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el primer número: ");
-        int num1 = scanner.nextInt();
+        int n1 = scanner.nextInt();
         System.out.print("Ingrese el segundo número: ");
         int num2 = scanner.nextInt();
         System.out.print("Ingrese la operación (+, -, *, /): ");
@@ -60,7 +81,7 @@ public class Calculadora {
         
         scanner.close();
     }
-    
+
     @BeforeAll
     static void setUpBeforeClass() throws Exception {
         System.out.println("---Inicio de las pruebas---");
