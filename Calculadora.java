@@ -1,3 +1,7 @@
+import java.util.Scanner;
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*;
+
 public class Calculadora {
 
     public static int sumar(int a, int b) {
@@ -30,8 +34,13 @@ public class Calculadora {
     }
 
     // Método media
-    public static double media(double a, double b){
+    public static double media(double a, double b) {
         return (a + b) / 2;
+    }
+
+    // Método multiplicación de tres números
+    public static double multiplicacionDe3(double a, double b, double c) {
+        return a * b * c;
     }
 
     public static int calculadora(int a, int b, char operacion) {
