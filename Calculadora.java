@@ -36,6 +36,11 @@ public class Calculadora {
 
         return (a + b)/ 2;
     }
+
+    public static double multiplicacionDe3(double a, double b, double c) {
+        return a * b * c;
+    }
+    
     
     public static int calculadora(int a, int b, char operacion) {
         switch (operacion) {
